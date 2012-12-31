@@ -1,0 +1,29 @@
+<html>
+<head><title>Welcome</title></head>
+<body><form method="post">
+      <h1>Welcome,{{username}}!</h1>
+<br>
+      <h2>That is you world!</h2>
+<br>
+      <a href="/logout">Logout</a>
+<hr>
+      <h1>New Post</h1>
+<br>
+      <lable>Subject<br>
+      <input type="text" name="subject" value="{{subject}}"></lable>
+<br>
+      <lable>Content<br>
+      <textarea name="content">{{content}}</textarea></lable>
+<br>
+     {{error}}
+<br>
+     <input type="submit">
+
+<hr>
+   {% for blog in blogs %}
+    <a href="/welcome/{{ blog.key().id() }}"> {{blog.subject}} </a>
+   <br>
+   {% endfor %}
+</form>
+</body>
+</html>

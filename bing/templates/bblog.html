@@ -1,0 +1,36 @@
+<html>
+  <head><title>CS 253 Blog</title></head>
+  <body>
+   <h1>CS 253 Blog</h1>
+     <br>
+     <h3>new post</h3>
+     <form method="post">
+     <lable>
+         <div>subject<div>
+         <input type="text" name="subject" value="{{subject}}">
+     </lable>
+     <lable>
+         <div>body</div><textarea name="body">{{body}}</textarea>
+     </lable>
+     
+       <div class="error"> {{error}} </div>
+     <input type="submit">
+     </form>
+
+    <hr>
+
+    {% if img_url %}
+     <img src="{{img_url}}">
+     {% endif %}
+
+    {% for blog in blogs %}
+    <div class="blog">
+      <div class="blog-subject">{{blog.subject}}</div>
+      <pre class="blog-body">{{blog.body}}</pre>
+      <div>
+    {% endfor %}
+
+    
+  </body>
+</html>
+     

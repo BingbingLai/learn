@@ -1,0 +1,15 @@
+<html>
+    <head><title> signup </title></head>
+    <body>
+    <form method="post"> 
+        <h1> Sign Up </h1>
+        <ul>
+            <li> Username <input type="text" name="username" value="{{username}}"> {{error_un}} </li>
+            <li> Password <input type="password" name="password" value=""> {{error_pw}} </li> 
+            <li> VerifyPassword <input type="password" name="verify" value=""> {{error_vf}} </li>
+            <li> Email(option) <input type='text' name="email" value="{{email}}"> {{error_em}} </li>
+        </ul>
+             <input type='submit'>
+    </form>
+    </body>
+</html>   
